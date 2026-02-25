@@ -1,0 +1,74 @@
+{
+  "project": "BuilderCRM",
+  "description": "SaaS CRM for Indian Builders & Realtors",
+  "pattern": "multiple_independent_agents",
+  "agents": [
+    {
+      "agent_id": "699f3d06f2130afa9fdb129a",
+      "name": "Lead Intelligence Agent",
+      "node_id": "lead_intelligence_agent",
+      "type": "independent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "has_tools": false,
+      "has_voice": false,
+      "has_image_output": false,
+      "has_file_output": false,
+      "has_schedule": false
+    },
+    {
+      "agent_id": "699f3d06baa7d9b4a230ccd9",
+      "name": "Follow-Up Coach Agent",
+      "node_id": "follow_up_coach_agent",
+      "type": "independent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "has_knowledge_base": false,
+      "has_tools": false,
+      "has_voice": false,
+      "has_image_output": false,
+      "has_file_output": false,
+      "has_schedule": false
+    },
+    {
+      "agent_id": "699f3d07baa7d9b4a230ccdb",
+      "name": "Pipeline Insights Agent",
+      "node_id": "pipeline_insights_agent",
+      "type": "independent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "has_tools": false,
+      "has_voice": false,
+      "has_image_output": false,
+      "has_file_output": false,
+      "has_schedule": false
+    }
+  ],
+  "workflow": {
+    "nodes": [
+      {"id": "input_node", "type": "Input", "label": "User Query", "nodeCategory": "input"},
+      {"id": "lead_intelligence_agent", "type": "Agent", "label": "Lead Intelligence Agent", "nodeCategory": "agent"},
+      {"id": "follow_up_coach_agent", "type": "Agent", "label": "Follow-Up Coach Agent", "nodeCategory": "agent"},
+      {"id": "pipeline_insights_agent", "type": "Agent", "label": "Pipeline Insights Agent", "nodeCategory": "agent"},
+      {"id": "output_lead", "type": "Output", "label": "Lead Intelligence Output", "nodeCategory": "end"},
+      {"id": "output_followup", "type": "Output", "label": "Follow-Up Coach Output", "nodeCategory": "end"},
+      {"id": "output_pipeline", "type": "Output", "label": "Pipeline Insights Output", "nodeCategory": "end"}
+    ],
+    "edges": [
+      {"source": "input_node", "target": "lead_intelligence_agent"},
+      {"source": "input_node", "target": "follow_up_coach_agent"},
+      {"source": "input_node", "target": "pipeline_insights_agent"},
+      {"source": "lead_intelligence_agent", "target": "output_lead"},
+      {"source": "follow_up_coach_agent", "target": "output_followup"},
+      {"source": "pipeline_insights_agent", "target": "output_pipeline"}
+    ]
+  }
+}

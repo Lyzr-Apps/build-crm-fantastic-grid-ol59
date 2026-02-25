@@ -1,0 +1,38 @@
+{
+  "agent_name": "Lead Intelligence Agent",
+  "agent_id": "699f3d06f2130afa9fdb129a",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "qualification_score": {
+      "type": "string",
+      "description": "Hot, Warm, or Cold"
+    },
+    "score_reasoning": {
+      "type": "string",
+      "description": "Detailed reasoning for the qualification score"
+    },
+    "market_context": {
+      "type": "string",
+      "description": "Relevant real estate market data and locality insights"
+    },
+    "builder_reputation": {
+      "type": "string",
+      "description": "Builder/developer reputation and track record insights"
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of recommended next actions for this lead"
+    },
+    "locality_insights": {
+      "type": "string",
+      "description": "Insights about the locality/area of interest"
+    },
+    "budget_analysis": {
+      "type": "string",
+      "description": "Analysis of the lead's budget vs market rates"
+    }
+  }
+}

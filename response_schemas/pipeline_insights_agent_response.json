@@ -1,0 +1,38 @@
+{
+  "agent_name": "Pipeline Insights Agent",
+  "agent_id": "699f3d07baa7d9b4a230ccdb",
+  "description": "Analyzes pipeline summary data (stage counts, conversion rates, stale leads, team metrics) passed from the dashboard UI and generates a natural-language executive summary with actionable recommendations, risk flags, and performance highlights",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "executive_summary": "string",
+    "conversion_analysis": "string",
+    "risk_flags": [
+      "string"
+    ],
+    "performance_highlights": [
+      "string"
+    ],
+    "actionable_recommendations": [
+      "string"
+    ],
+    "stale_lead_analysis": "string",
+    "revenue_forecast": "string"
+  },
+  "example_response": {
+    "executive_summary": "High-level pipeline health summary",
+    "conversion_analysis": "Analysis of conversion rates and trends",
+    "risk_flags": [
+      "sample string"
+    ],
+    "performance_highlights": [
+      "sample string"
+    ],
+    "actionable_recommendations": [
+      "sample string"
+    ],
+    "stale_lead_analysis": "Analysis of stale/aging leads",
+    "revenue_forecast": "Revenue pipeline forecast and insights"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "agent_name": "Follow-Up Coach Agent",
+  "agent_id": "699f3d06baa7d9b4a230ccd9",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "message_draft": {
+      "type": "string",
+      "description": "Personalized follow-up message draft"
+    },
+    "message_tone": {
+      "type": "string",
+      "description": "Tone of the message: SMS, Email, or WhatsApp"
+    },
+    "optimal_timing": {
+      "type": "string",
+      "description": "Recommended timing for the follow-up"
+    },
+    "talking_points": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key conversation talking points"
+    },
+    "engagement_strategy": {
+      "type": "string",
+      "description": "Overall engagement strategy recommendation"
+    },
+    "urgency_level": {
+      "type": "string",
+      "description": "High, Medium, or Low urgency assessment"
+    }
+  }
+}

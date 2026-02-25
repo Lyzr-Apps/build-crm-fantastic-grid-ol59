@@ -1,0 +1,28 @@
+{
+  "agent_name": "Follow-Up Coach Agent",
+  "agent_id": "699f3d06baa7d9b4a230ccd9",
+  "description": "Reviews a lead's interaction history (past notes, site visits, communications) provided via UI context and generates a personalized follow-up message draft (SMS/email/WhatsApp tone), optimal timing suggestion, and conversation talking points tailored to Indian real estate sales",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "message_draft": "string",
+    "message_tone": "string",
+    "optimal_timing": "string",
+    "talking_points": [
+      "string"
+    ],
+    "engagement_strategy": "string",
+    "urgency_level": "string"
+  },
+  "example_response": {
+    "message_draft": "Personalized follow-up message draft",
+    "message_tone": "Tone of the message: SMS, Email, or WhatsApp",
+    "optimal_timing": "Recommended timing for the follow-up",
+    "talking_points": [
+      "sample string"
+    ],
+    "engagement_strategy": "Overall engagement strategy recommendation",
+    "urgency_level": "High, Medium, or Low urgency assessment"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "agent_name": "Lead Intelligence Agent",
+  "agent_id": "699f3d06f2130afa9fdb129a",
+  "description": "Analyzes lead details (name, location, budget, property interest) and enriches with publicly available real estate market data, locality insights, and builder reputation; outputs a lead qualification score (Hot/Warm/Cold) with reasoning and recommended next actions",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "qualification_score": "string",
+    "score_reasoning": "string",
+    "market_context": "string",
+    "builder_reputation": "string",
+    "recommended_actions": [
+      "string"
+    ],
+    "locality_insights": "string",
+    "budget_analysis": "string"
+  },
+  "example_response": {
+    "qualification_score": "Hot, Warm, or Cold",
+    "score_reasoning": "Detailed reasoning for the qualification score",
+    "market_context": "Relevant real estate market data and locality insights",
+    "builder_reputation": "Builder/developer reputation and track record insights",
+    "recommended_actions": [
+      "sample string"
+    ],
+    "locality_insights": "Insights about the locality/area of interest",
+    "budget_analysis": "Analysis of the lead's budget vs market rates"
+  }
+}

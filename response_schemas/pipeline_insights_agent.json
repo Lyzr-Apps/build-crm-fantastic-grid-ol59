@@ -1,0 +1,40 @@
+{
+  "agent_name": "Pipeline Insights Agent",
+  "agent_id": "699f3d07baa7d9b4a230ccdb",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "executive_summary": {
+      "type": "string",
+      "description": "High-level pipeline health summary"
+    },
+    "conversion_analysis": {
+      "type": "string",
+      "description": "Analysis of conversion rates and trends"
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of risk flags and concerns"
+    },
+    "performance_highlights": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Notable performance achievements"
+    },
+    "actionable_recommendations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific actionable recommendations"
+    },
+    "stale_lead_analysis": {
+      "type": "string",
+      "description": "Analysis of stale/aging leads"
+    },
+    "revenue_forecast": {
+      "type": "string",
+      "description": "Revenue pipeline forecast and insights"
+    }
+  }
+}
